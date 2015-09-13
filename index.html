@@ -13,7 +13,9 @@ enddate: 2015-10-23
 instructor: ["Russell Alleen-Willems", "Marina Oganyan", "Adam Richie-Halford", "Thomas Sibley", "Allison Smith"]
 helper: ["Emilia Gan", "Michael Gutteridge", "Ariel Rokem", "Kara Woo"]
 contact: arokem@gmail.com
-etherpad:   # FIXME (insert the URL for your Etherpad if you're using one)
+etherpad: https://etherpad.mozilla.org/2015-10-22-uw
+etherpad_py: https://etherpad.mozilla.org/2015-10-22-uw-python-room
+etherpad_r: https://etherpad.mozilla.org/2015-10-22-uw-r-room
 eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 1234567890AB key for Eventbrite registration)
 ---
 <!--
@@ -68,6 +70,14 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   </em>
 </p>
 
+<p>
+  This workshop is supported by the UW <a href="http://escience.washington.edu/">
+  eScience Institute</a>. Priority will thus be given to UW-affiliated students, 
+  staff and faculty. We have a <a href="http://lists.software-carpentry.org/mailman/listinfo/seattle_lists.software-carpentry.org">UW Software Carpentry email list</a> 
+  that you can join to keep up with local plans, to get advice, ask questions, 
+  etc. after the workshop is over.
+</p>
+
 <!--
   AUDIENCE
 
@@ -76,9 +86,13 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 -->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
-  <strong>You don't need to have any previous knowledge of the tools that will
-    be presented at the workshop.</strong>
+  The course is aimed at graduate students, staff, faculty, and other
+  researchers at UW. No previous experience with programming is required.
+  If you do have experience in the topics in the syllabus and want to help,
+  send us an email. The instructors are UW students, staff, faculty and other
+  active researchers. We use the
+  <a href="https://twitter.com/search?q=%23swcuw">#swcuw</a> hashtag on
+  Twitter during class.
 </p>
 
 <!--
@@ -142,26 +156,45 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 -->
 <h2>Schedule</h2>
 
+<p>
+  We are running two full concurrent sessions, one in each room. There
+  are two key differences between the sessions. First is that one
+  session will teach programming with <b>Python</b> and the other
+  session will teach programming with <b>R</b>, all the other class
+  content will be the same. <br><br>
+  As a rough guide to choosing which language to learn, Python might be
+  best for you if you're working in the natural or physical sciences,
+  and if you're in the social sciences and humanities then R might be
+  more valuable. <br><br>
+  The second difference between the two sessions is that the instructors
+  in the Python session mostly come from the natural and physical
+  sciences, while the instructors in the R session mostly come from the
+  social sciences and humanities. These is simply a convenient way to
+  organise the lessons, and of course you're welcome to join whichever
+  session you think will benefit you the most. The choice is completely
+  up to you.
+</p>
+
 <div class="row">
   <div class="col-md-6">
     <h3>Day 1</h3>
     <table class="table table-striped">
       <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
+      <tr> <td>10:30</td> <td>Coffee break</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>13:00</td>  <td>Intro to Python or R</td> </tr>
+      <tr> <td>14:30</td>  <td>Coffee break</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>09:00</td>  <td>Building programs with Python or R</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee break</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>13:00</td>  <td>Version control with Git</td> </tr>
+      <tr> <td>14:30</td>  <td>Coffee break</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
@@ -183,9 +216,13 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 -->
 {% if page.etherpad %}
 <p>
-  <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
+  <strong>Etherpad:</strong>
   <br/>
-  We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
+  We will use Etherpads for chatting, taking notes, and sharing URLs and
+  bits of code. The Python room will use
+  <a href="{{page.etherpad_py}}">{{page.etherpad_py}}</a>
+  and the R room will use
+  <a href="{{page.etherpad_r}}">{{page.etherpad_r}}</a>.
 </p>
 {% endif %}
 
@@ -236,7 +273,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
       <li><a href="{{site.swc_lessons}}/ref/03-python.html">Reference...</a></li>
     </ul>
   </div>
-  <!--
   <div class="col-md-6">
     <h3>Programming in R</h3>
     <ul>
@@ -248,7 +284,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
       <li><a href="{{site.swc_lessons}}/ref/06-R.html">Reference...</a></li>
     </ul>
   </div>
-  -->
 </div>
 
 <div class="row">
@@ -264,20 +299,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
       <li>Open licenses</li>
       <li>Where to host work, and why</li>
       <li><a href="{{site.swc_lessons}}/ref/02-git.html">Reference...</a></li>
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <h3>Managing Data with SQL</h3>
-    <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="{{site.swc_lessons}}/ref/04-sql.html">Reference...</a></li>
     </ul>
   </div>
 </div>
@@ -605,43 +626,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
     </div>
   </div>
 </div> <!-- End of 'R' section. -->
-
-<div id="sql"> <!-- Start of 'SQLite' section. -->
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
-      <p>
-        The <a href="{{site.swc_github}}/windows-installer">Software Carpentry Windows Installer</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-macosx">Mac OS X</h4>
-      <p>
-        SQLite comes pre-installed on Mac OS X.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
-      <p>
-        SQLite comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
-</div> <!-- End of 'SQLite' section. -->
 
 <!--
   Uncomment this section if you are using our virtual machine.
